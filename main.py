@@ -236,7 +236,7 @@ def search_and_get_all_links():
         
         return jsonify({
             "ok": True,
-            "developer": "Tofazzal Hossain",
+            "developer": "Mahir Labib",
             "results": final_results
         })
 
