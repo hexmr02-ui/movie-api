@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Documentation</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>API Documentation</h1>
+        <p>A simple API to scrape movie information and download links.</p>
+    </header>
+
+    <main>
+        <section id="api-src">
+            <h2>Combined Search and Get Links</h2>
+            <p><strong>Endpoint:</strong> <code>/api/src</code></p>
+            <p>This endpoint searches for a movie and returns all details, including download links, in a single request.</p>
+            <form id="src-form">
+                <input type="text" name="query" placeholder="Enter movie name (e.g., marvel)" required>
+                <button type="submit">Test Endpoint</button>
+            </form>
+            <pre id="src-response"></pre>
+        </section>
+
+        <section id="api-search">
+            <h2>1. Search Movies</h2>
+            <p><strong>Endpoint:</strong> <code>/api/search</code></p>
+            <p>Searches for movies based on a query and returns a list of matching results.</p>
+            <form id="search-form">
+                <input type="text" name="query" placeholder="Enter movie name (e.g., captain marvel)" required>
+                <button type="submit">Test Endpoint</button>
+            </form>
+            <pre id="search-response"></pre>
+        </section>
+
+        <section id="api-download-links">
+            <h2>2. Get Intermediate Download Link</h2>
+            <p><strong>Endpoint:</strong> <code>/api/download-links</code></p>
+            <p>Takes a movie page URL and returns the intermediate and final download page URLs.</p>
+            <form id="download-links-form">
+                <input type="text" name="url" placeholder="Enter movie page URL" required>
+                <button type="submit">Test Endpoint</button>
+            </form>
+            <pre id="download-links-response"></pre>
+        </section>
+
+        <section id="api-final-links">
+            <h2>3. Get Final Download Links</h2>
+            <p><strong>Endpoint:</strong> <code>/api/final-links</code></p>
+            <p>Takes the final download page URL and returns all available download links grouped by quality.</p>
+            <form id="final-links-form">
+                <input type="text" name="url" placeholder="Enter final download page URL" required>
+                <button type="submit">Test Endpoint</button>
+            </form>
+            <pre id="final-links-response"></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024. Developed by Tofazzal Hossain. All rights reserved.</p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
