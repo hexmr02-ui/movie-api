@@ -184,7 +184,7 @@ def search_and_get_all_links():
         if not search_results:
             return jsonify({
                 "ok": True,
-                "developer": "Tofazzal Hossain",
+                "developer": "Mahir Labib",
                 "results": []
             })
 
