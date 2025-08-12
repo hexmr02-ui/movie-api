@@ -11,6 +11,10 @@ CORS(app)
 def index():
     return render_template("index.html")
 
+@app.route("/api-docs")
+def api_docs():
+    return render_template("api.html")
+
 def parse_quality(quality_str: str) -> int:
     """Parses a quality string (e.g., '1080p') into an integer."""
     if not quality_str:
